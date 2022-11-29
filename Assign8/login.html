@@ -1,0 +1,24 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<script>
+    function disp(){
+        var storage= window.localStorage;
+        var Username=document.getElementById("username").value;
+        storage.setItem('name',user);
+    }
+</script>
+</head>    
+<body>   
+    <div class="container">
+    <form action="success.html" id="loginform" method="post">
+          <p>User Name :<input type="text " name="Username" id="Username" placeholder="Enter Username"/></p><br>
+          <p>Password :<input type="password " name="password" id="Username" placeholder="Enter password"/></p><br>
+          <input type="submit" id="submit" value="login" onclick="disp()">
+        <input type="reset"/>
+    </form>
+    </div>
+</body>     
+</html>  
