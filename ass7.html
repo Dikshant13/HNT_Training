@@ -1,0 +1,102 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+  
+  <style>
+   *{
+        box-sizing: border-box;
+    }
+
+    header{
+        background-color: #777;
+        padding: 2px;
+        text-align: center;
+        font-size: 1em;
+        color:blue;
+    }
+
+    section{
+        display: flex;
+    }
+    nav{
+      flex: 1;
+      background-color: lightblue;
+      padding: 20px;
+
+    }
+
+    nav li{
+        list-style-type: none;
+        padding: 0;
+    }
+    article{
+
+
+        flex:3;
+        background-color: yellow;
+        padding: 5px;
+    }
+
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+    @media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+</style>
+
+<body>
+  <h1>
+    Css Flex Layout.
+  </h1>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Fugiat maiores iste nostrum dolorum eos, rerum atque eaque minus cupiditate ipsa ear
+  </p>
+  <header>Technologies</header>
+  <section>
+  
+    <nav>
+      <ul>
+        <li><a href="">Html</a></li>
+        <li><a href="">Css</a></li>
+        <li><a href="">Java</a></li>
+        <li><a href="">Python</a></li>
+        <li><a href="">Ruby</a></li>
+      </ul>
+    </nav>
+    
+    <article>
+      <h1>Java</h1>
+      <p>Java is very amazing language, very robust</p>
+    </article>
+  </section>
+  
+  <footer>
+    <p>
+      Footer
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
