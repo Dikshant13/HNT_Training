@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script>
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
+
+	function dragStart(ev) {
+		ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function dragDrop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+	}
+	</script>
+	<style>
+	.div1 {
+        
+		width: 280px;
+		height: 85px;
+		padding: 10px;
+        padding-left: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+		border: 2px solid blue;
+		/* background-color: #F5F5F5; */
+        background-color: rgb(192, 243, 243);
+        box-shadow:2px 3px red;
+
+	}
+	
+	p {
+        
+		font-size: 20px;
+		font-weight: bold;
+        color: red;
+	}
+	
+	.gfg {
+        text-shadow: 4px 2px black;
+        border:dotted green;
+		font-size: 40px;
+		color: #009900;
+		font-weight: bold;
+        background-color:gold;
+        display:inline-block;
+        padding:2px 7px 2px ;
+        padding-left: 7px;
+	}
+    #P {
+    
+        text-shadow:2px 2px lightblue;
+        text-transform:capitalize; 
+
+        
+        /* color: coral;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+/*         
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
+/*         
+  color: white;
+  text-shadow: 2px 2px 4px #000000; */
+
+    }
+    
+	</style>
+</head>
+
+<body>
+    <br>
+	<div class="gfg">Drag and Drop</div><br>
+	
+<p id="P">Image Drag and Drop in boxes</p>
+
+
+	<div class="div1"
+		ondrop="dragDrop(event)"
+		ondragover="allowDrop(event)">
+	<img id="drag1"
+		src="car.jpg"
+		draggable="true"
+		ondragstart="dragStart(event)"
+		width="240"
+		height="75">
+	</div><br>
+	<br>
+	<div class="div1"
+		ondrop="dragDrop(event)"
+		ondragover="allowDrop(event)">
+	</div>
+</body>
+</html>

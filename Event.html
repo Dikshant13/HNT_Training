@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <style>
+    div {
+    margin-top: 50px;
+    margin-left: 50px;
+      width: 700px;
+      height: 300px;
+      border: 1px solid black;
+    }
+    </style>
+
+
+</script>
+   </head>
+<body >
+
+
+    <h3 id="demo1" onclick="myFunction()">Click this text to change the color.</h3>
+
+    <script>
+    function myFunction() {
+      document.getElementById("demo1").style.color = "red";
+    }
+    </script>
+    
+Enter your  First name: <input type="text" name="fname" id="fname" onfocus="myFunction()">
+
+<br><br>
+
+Enter your Last name: <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()"><br><br>
+
+
+<div onmousemove="myFunction(event)" onmouseout="clearCoor()">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptatem s
+        imilique ut quisquam minus ducimus. Omnis, sed ut eveniet optio beatae
+         cupiditate error dolorem. Quisquam magnam reiciendis impedit consequuntur cum?</p>
+</div>
+
+
+
+<script>
+
+    
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+
+function focusFunction() {
+  document.getElementById("myInput").style.background = "yellow";
+}
+
+function blurFunction() {
+  document.getElementById("myInput").style.background = "red";
+}
+
+
+
+</script>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction(e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  var coor = "Coordinates: (" + x + "," + y + ")";
+  document.getElementById("demo").innerHTML = coor;
+}
+
+function clearCoor() {
+  document.getElementById("demo").innerHTML = "";
+}
+</script>
+
+
+</video>
+
+</body>
+</html>

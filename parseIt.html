@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Addition of 2 num</title>
+</head>
+<body >
+   
+<div>
+        <input type="number" name="" id="Fnum" value="0">+<input type="number" name="" id="Snum" value="0"> =<span id="result" value="0"></span>
+        <script>
+            let a=document.getElementById("Fnum");
+            let b=document.getElementById("Snum");
+
+
+            a.addEventListener("keyup",sumIt,true);
+            b.addEventListener("keyup",sumIt,true);
+
+            function sumIt(){
+                let s= parseInt(a.value)+parseInt(b.value);
+                document.getElementById("result").innerText=(s);
+            }
+
+
+        </script>
+</div>
+</body>
+</html>
+
+ 

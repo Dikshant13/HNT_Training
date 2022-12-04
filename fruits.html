@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Fruits</title>
+</head>
+<script>
+function favFruit() {
+var mylist = document.getElementById("myList");
+document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;
+}
+</script>
+
+
+<body>
+<form class="one" style="text-align: center;">
+<b style="text-align: center;"> Select one of the favorite fruit from the given list to display. </b><br><br>
+<select id = "myList" onchange = "favFruit()" >
+<option> ---Fruit--- </option>
+<option style="background-color: yellow;"> Mango</option>
+<option style="background-color: blue;"> Grapes</option>
+<option style="background-color: pink;"> Orange </option>
+<option style="background-color: red;"> Banana</option>
+</select>
+<p> Your selected fruit is: 
+<input type = "text" id = "favourite" size = "20"> </p>
+</form>
+<div style="text-align: center;">
+<input type="checkbox" oninput="func_o(this.value)">
+<p id="one">OFF</p>
+<script>
+    function func_o(val){
+        document.getElementById("one").innerHTML=val;
+    }
+</script>
+</div>
+</body>
+</html>
+
+ 

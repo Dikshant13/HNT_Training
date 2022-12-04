@@ -1,0 +1,51 @@
+<html>
+
+    <head>
+
+        <title>event handling</title>
+
+    </head>
+
+    <script>
+
+        function errorMssg(){
+
+            console.log("sorry cant play");
+
+            alert('error in playing video!');
+
+        }
+
+        function focus(){
+
+            document.getElementById("mssg").style.backgroundColor='yellow';
+
+        }
+
+       function blur(){
+
+        document.getElementById("mssg").style.backgroundColor='green';
+
+        //<!--change bg on focus-->
+
+       }
+
+    </script>
+
+    <body>
+
+        <h2>event management</h2>
+
+        <!--Enter your message : <input type="text" id="mssg" onfocus="focus()" onblur="blur()"><br><br>
+
+        work on this-->
+
+        <video id="vid" width="350" height="350" controls>
+
+            <source src="video.mp4" onerror="errorMssg()" type="video/mp4">
+
+        </video>
+
+    </body>
+
+</html>
