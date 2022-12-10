@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, 
+                initial-scale=1.0" />
+    <title>
+        mouse event
+    </title>
+  
+    <style>
+        .geeks {
+            width: 40%;
+            height: 400px;
+            background-size: cover;
+        }
+    </style>
+</head>
+  
+<body>
+    <div class="geeks"></div>
+  
+    <script>
+        var div =
+            document.querySelector(".geeks");
+  
+        div.addEventListener(
+            "mousemove", function (e) {
+                x = e.offsetX;
+                y = e.offsetY;
+                div.style.backgroundColor
+                    = `rgb(${x}, ${y}, ${x - y})`;
+            });
+    </script>
+</body>
+  
+</html>

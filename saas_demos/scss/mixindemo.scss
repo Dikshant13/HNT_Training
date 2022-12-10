@@ -1,0 +1,91 @@
+
+
+
+$primary-font:("Sans",'Muli');
+@mixin colormix{
+    color:purple;
+
+}
+
+@mixin colormix2{
+    color:#5605ed;
+}
+
+@mixin dynamicMixin($size,$style,$color){
+    border : $size $style $color;
+}
+.p1{
+    font-family: $primary-font;
+    @include colormix;
+    background-color: rgb(71, 209, 12);
+
+    @include dynamicMixin(3px,solid ,rgb(99, 12, 214) );
+}
+
+.p2{
+    @include colormix;
+    background-color: rgba(250, 13, 147, 0.6);
+}
+
+.p3{
+    @include colormix;
+    background-color: rgba(243, 60, 60, 0.6);
+}
+
+h1{
+    @include colormix2()
+}
+
+
+div {
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 6s;
+  }
+
+  
+@keyframes example {
+    // 0%   {background-color:red; left:0px; top:0px;}
+    // 25%  {background-color:yellow; left:200px; top:0px;}
+
+    0%  {
+    @include colormix;
+    left: 0px;
+    top:0px;
+    background-color: red}
+
+
+    25%  {
+        @include colormix;
+        left: 200px;
+        top:0px;
+        background-color: aqua;}
+
+
+
+        50%  {
+            @include colormix;
+            left: 200px;
+            top:200px;
+            background-color: blue;}
+
+            75%  {
+                @include colormix;
+                left: 0px;
+                top:200px;
+                background-color: green;}
+
+
+                100%  {
+                    @include colormix;
+                    left: 0px;
+                    top:  0px;
+                    background-color: black;}
+
+    // 50%  {background-color:blue; left:200px; top:200px;}
+    // 75%  {background-color:green; left:0px; top:200px;}
+    // 100% {background-color:red; left:0px; top:0px;}
+  }

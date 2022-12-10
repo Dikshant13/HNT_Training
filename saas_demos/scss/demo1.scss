@@ -27,6 +27,7 @@ h2{
 }}
 
 body{
+
 margin:1;
 padding:0.5;
 font-family: 'Times New Roman', Times, serif;
@@ -45,9 +46,6 @@ p{
 $roseColor:if(true,yellow,blue);
 $jasmineColor:if(false,papayawhip,darksalmon);
 $lotusColor:if(6>3,purple,aqua);
-$sunflowerColor:if(false,green,black);
-$sun:if(false,yellow,violet);
-
 p:nth-of-type(1){
     background-color: $roseColor;
     @if(lightness($roseColor) > 50%){
@@ -55,7 +53,7 @@ p:nth-of-type(1){
     }
     @else{
 
-        border:2px dotted deeppink;
+        border:2px dashed deeppink;
     }
 }
 
@@ -65,27 +63,3 @@ p:nth-of-type(2){
  @if true{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
 }
-
-p:nth-of-type(3){
-    @if 1+1==2 {
-        background-color: $sunflowerColor;
-    } 
-}
-
-
-p:nth-of-type(4){
-    @if 5+1==6 {
-        background-color: $sun;
-    } 
-    @if(lightness($roseColor) > 50%){
-        border:1px solid blue;
-   }
-   @else{
-
-       border:2px dashed deeppink;
-       font-weight: bold;
-       font-style: italic;
-       color: red;
-   }
-}
-

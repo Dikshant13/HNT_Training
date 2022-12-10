@@ -1,0 +1,64 @@
+.p1 {
+  font-family: "Sans", "Muli";
+  color: purple;
+  background-color: rgb(71, 209, 12);
+  border: 3px solid rgb(99, 12, 214);
+}
+
+.p2 {
+  color: purple;
+  background-color: rgba(250, 13, 147, 0.6);
+}
+
+.p3 {
+  color: purple;
+  background-color: rgba(243, 60, 60, 0.6);
+}
+
+h1 {
+  color: #5605ed;
+}
+
+div {
+  width: 70px;
+  height: 70px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 6s;
+}
+
+@keyframes example {
+  0% {
+    color: purple;
+    left: 0px;
+    top: 0px;
+    background-color: red;
+  }
+  25% {
+    color: purple;
+    left: 200px;
+    top: 0px;
+    background-color: aqua;
+  }
+  50% {
+    color: purple;
+    left: 200px;
+    top: 200px;
+    background-color: blue;
+  }
+  75% {
+    color: purple;
+    left: 0px;
+    top: 200px;
+    background-color: green;
+  }
+  100% {
+    color: purple;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+  }
+}
+
+/*# sourceMappingURL=mixindemo.css.map */
