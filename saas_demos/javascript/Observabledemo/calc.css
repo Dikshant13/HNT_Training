@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+}
+.button{
+    width:50;
+    height:50;
+    font-size:25;
+    margin:2;
+    background:#e41a1a;
+    color:white;
+    border:none;
+}
+.box{
+    width:220;
+    margin:5;
+    font-size:25;
+    padding:5;
+    cursor:pointer;
+    border:none;
+    color:#e41a1a;
+}
+
+.main{
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform: translateX(.70%) translateY(.70%);
+    
+}
+
+.bg{
+    background:linear-gradient(to right, #e41a1a,#1f1fe0);
+    height:120%;
+}

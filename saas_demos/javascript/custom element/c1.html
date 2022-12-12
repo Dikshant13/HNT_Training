@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content=
+        "width=device-width,
+        initial-scale=1.0" />
+        <title>Custom Element 1</title>
+        
+    </head>
+    <body>
+        <h1>Custom Element</h1>
+        <my-app
+        style="border:1px solid blue; background-color: grey;"
+        message="this is text of this first element"></my-app>
+
+        <br><br>
+         
+        <my-app
+        style="border:1px solid red; background-color: yellow;"
+        message="this is text of this second element"></my-app>
+
+<br><br>
+        <template id="mytemplate">
+            <h2 style="color: red;">Rendering date </h2>
+            <p id="display"></p>
+            <script>
+                let date = new Date();
+                document.getElementById("display").innerHTML=date;
+            </script>
+        </template>
+
+        <script src="c1.js"></script>
+    </body>
+</html>
