@@ -1,0 +1,23 @@
+const Calculator = require('../src/calc');
+
+let calculator;
+beforeEach(function(){
+  console.log('creating calculator object');
+     calculator=new Calculator();
+
+
+});
+
+
+
+describe("Calculator test suite",function(){
+
+    it("add function test",function(){
+
+        expect(calculator.add(3,4)).toEqual(7);
+
+
+    });
+
+
+});
